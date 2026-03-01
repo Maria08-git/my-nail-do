@@ -1,4 +1,5 @@
-body{
+body
+{
   background-image: url("tuscany.jpeg");
   background-size: cover;
   backgorund-position: center;
@@ -7,7 +8,8 @@ body{
   font-family: Arial, sans-serif;
 }
 
-body::before {
+body::before 
+{
   content: "";
   position: fixed;
   top: 0; left: 0;
@@ -16,42 +18,49 @@ body::before {
   z-index: -1;
 }
 
-header{
+header
+{
   backgorund-color: #333;
   color: grey;
   padding: 20px;
   text-align: center;
 }
 
-header h1{
+header h1
+{
   margin: 0;
 }
 
-nav a{
+nav a
+{
   color: white;
   text-decoration: none;
   margin: 0 10px;
 }
 
-nav a: hover{
+nav a: hover
+{
   color: blue;
   text-decoration: underline;
 }
 
-main{
+main
+{
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
 }
 
-main img{
+main img
+{
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px0;
 }
 
-footer{
+footer
+{
   background-color: #333;
   color: white;
   text-align: center;
@@ -61,25 +70,30 @@ footer{
   width: 100%
 }
 
-p{
+p
+{
   font-size: 1.1em;
 }
 
-a{
+a
+{
   color: blue;
   text-decoration: none;
 }
 
-a:hover{
+a:hover
+{
   text-decoration: underline;
 }
 
-img{
+img
+{
   border: 5px solid #4CAF50;
   border-radius: 10px;
 }
 
-main a[href^="mailto:"]{
+main a[href^="mailto:"]
+{
   color: #ff5722;
   font-weight: bold;
 }
