@@ -38,6 +38,8 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+
 footer {
     background-color: #333;
     color: white;
@@ -80,13 +82,15 @@ main a[href^="mailto:"]
     background-color: #e91e63;
 }
 .catalogue-img {
-  max-width: 400px;   /* limits size */
-  height: auto;       /* keeps proportions */
+  max-width: 400px;   /* keeps it from being too big */
+  height: auto;
   display: block;
-  margin: 20px auto;  /* centers the image */
+  margin: 20px auto;  /* centers it */
   border: 4px solid #ff4081; /* stylish border */
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
 }
+
 
 
 
