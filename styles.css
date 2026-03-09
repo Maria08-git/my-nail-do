@@ -136,5 +136,20 @@ form input[type="reset"] {
   cursor: pointer;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #e75480; /* pink border */
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f8c6d8; /* soft pink header */
+}
 
 
