@@ -112,7 +112,29 @@ main a[href^="mailto:"]
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
 }
+form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
 
+form input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  padding: 8px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e75480; /* pinkish tone */
+  color: white;
+  cursor: pointer;
+}
 
 
 
