@@ -40,36 +40,40 @@
   <p><strong>WHERE BEAUTY MEETS PASSION</strong></p>
   <h3>Ria's Nail Do</h3>
 
-<p>Book an Appointment.</p>
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
-  <input type="submit" value="Submit">
-  <input type="reset" value="Cancel">
-</form> 
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <div style="flex: 1;">
+    <h3>Book an Appointment</h3>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Cancel">
+    </form>
+  </div>
 
-</style>
-<body>
-
-<table style="width:100%">
-  <tr>
-    <th>Service</th>
-    <th>Price for regular customers</th>
-    <th>Price for new customers</th>
-  </tr>
-  <tr>
-    <td>Gel on tips</td>
-    <td>P70</td>
-    <td>P80</td>
-  </tr>
-  <tr>
-    <td>Gel on naturals</td>
-    <td>P60</td>
-    <td>P70</td>
-  </tr>
-</table>
+  <div style="flex: 1;">
+    <h3>Our Services</h3>
+    <table style="width:100%; border-collapse: collapse;">
+      <tr>
+        <th>Service</th>
+        <th>Price for regular customers</th>
+        <th>Price for new customers</th>
+      </tr>
+      <tr>
+        <td>Gel on tips</td>
+        <td>P70</td>
+        <td>P80</td>
+      </tr>
+      <tr>
+        <td>Gel on naturals</td>
+        <td>P60</td>
+        <td>P70</td>
+      </tr>
+    </table>
+  </div>
+</div>
 
   <div class="row text-center">
     <div class="col-md-4 mb-4">
