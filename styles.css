@@ -151,5 +151,8 @@ th, td {
 th {
   background-color: #f8c6d8; /* soft pink header */
 }
+body{
+    background-image:url('nails jpg.jpg');
+    background-size:cover;
 
 
