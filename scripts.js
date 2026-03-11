@@ -2,8 +2,9 @@
 (function setActiveNav(){
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(a=>{
-    const href = a.getAttribute('href');
-    if (href === here) a.classList.add('active');
+    const href = a.getAttribute('href') || '';
+    const linkFile = href.split('/').pop();
+    if (linkFile === here || (linkFile === '' && here === 'index.html')) a.classList.add('active');
   });
 })();
 
@@ -13,10 +14,12 @@
   const themeToggle = document.getElementById('themeToggle');
   const accentPicker = document.getElementById('accentPicker');
 
-  // Load saved settings
+  // Load saved settings (fall back to system preference)
   const savedTheme = localStorage.getItem('theme');
   const savedAccent = localStorage.getItem('accent');
-  if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initialTheme);
   if (savedAccent){
     root.style.setProperty('--accent', savedAccent);
     if (accentPicker) accentPicker.value = savedAccent;
@@ -25,9 +28,9 @@
   // Toggle theme
   if (themeToggle){
     themeToggle.addEventListener('click', ()=>{
-      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
+      const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('theme', currentTheme);
     });
   }
 
@@ -73,24 +76,30 @@
   const emailBtn = document.getElementById('emailSubmit');
   const waBtn = document.getElementById('waSubmit');
 
+  function getVal(name){
+    const el = form.elements[name];
+    if (!el) return '';
+    return (el.value || '').toString().trim();
+  }
+
   function buildMessage(){
-    const fn = form.elements['firstName'].value.trim();
-    const ln = form.elements['lastName'].value.trim();
-    const ph = form.elements['phone'].value.trim();
-    const em = form.elements['email'].value.trim();
-    const sv = form.elements['service'].value;
-    const dt = form.elements['date'].value;
-    const tm = form.elements['time'].value;
-    const nt = form.elements['notes'].value.trim();
+    const fn = getVal('firstName');
+    const ln = getVal('lastName');
+    const ph = getVal('phone');
+    const em = getVal('email');
+    const sv = getVal('service');
+    const dt = getVal('date');
+    const tm = getVal('time');
+    const nt = getVal('notes');
 
     const lines = [
       `Booking Request - Ria's Nail Do`,
-      `Name: ${fn} ${ln}`,
-      `Phone: ${ph}`,
+      `Name: ${fn} ${ln}`.trim(),
+      `Phone: ${ph || '-'}`,
       `Email: ${em || '-'}`,
-      `Service: ${sv}`,
-      `Date: ${dt}`,
-      `Time: ${tm}`,
+      `Service: ${sv || '-'}`,
+      `Date: ${dt || '-'}`,
+      `Time: ${tm || '-'}`,
       `Notes: ${nt || '-'}`,
     ];
     return lines.join('\n');
