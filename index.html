@@ -1,73 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ria's Nail Do</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ria's Nail Do – Where Beauty Meets Passion</title>
 
-    https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
-    https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap
-    styles.css
+  <!-- SEO -->
+  <meta name="description" content="Ria's Nail Do offers quality nail and beauty services at affordable prices. Where beauty meets passion." />
+  <meta property="og:title" content="Ria's Nail Do" />
+  <meta property="og:description" content="Where beauty meets passion." />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap & Icons -->
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+  https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css
+  <!-- Google Font -->
+  https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap
+  <!-- Custom CSS -->
+  styles.css
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
-        index.htmlRia's Corner</a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      index.html
+        <span class="logo-dot me-2"></span>
+        Ria's Corner
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">index.htmlHome</a></li>
-                <li class="nav-item">about.htmlAbout</a></li>
-                <li class="nav-item">contact.htmlContact</a></li>
-            </ul>
+      <div id="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">index.htmlHome</a></li>
+          <li class="nav-item">about.htmlAbout</a></li>
+          <li class="nav-item">services.htmlServices</a></li>
+          <li class="nav-item">gallery.htmlGallery</a></li>
+          <li class="nav-item">booking.htmlBook</a></li>
+          <li class="nav-item">contact.htmlContact</a></li>
+        </ul>
+
+        <div class="d-flex ms-lg-3 align-items-center gap-2">
+          <button id="themeToggle" class="btn btn-outline-light btn-sm" title="Light/Dark Mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <input id="accentPicker" type="color" class="form-control form-control-color" title="Pick brand color" value="#ff4081" />
         </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="container text-center">
-        <h1 class="fw-bold">Where Beauty Meets Passion</h1>
-        <p class="lead mt-3">Professional Nails • Quality Service • Affordable Prices</p>
-        <button class="btn btn-lg btn-pink mt-3" data-bs-toggle="modal" data-bs-target="#appointmentModal">
-            Book an Appointment
-        </button>
+  <!-- Hero -->
+  <header class="hero d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Where Beauty Meets Passion</h1>
+      <p class="lead mt-2">Professional Nails • Quality Service • Affordable Prices</p>
+      <div class="mt-3">
+        booking.html<i class="bi bi-calendar2-check"></i> Book Now</a>
+        services.html<i class="bi bi-list-stars"></i> See Services</a>
+      </div>
     </div>
-</section>
+  </header>
 
-<!-- CATALOG SECTION -->
-<section class="container my-5">
-    <h2 class="text-center mb-4">Our Catalogue</h2>
-    catal.jpg
-</section>
+  <!-- Catalogue -->
+  <section class="container my-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title">Our Catalogue</h2>
+      <p class="text-muted">Explore popular styles from our latest set designs.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        catal.jpg
+      </div>
+    </div>
+  </section>
 
-<!-- APPOINTMENT MODAL -->
-<div class="modal fade" id="appointmentModal">
-    <div class="modal-dialog">
-        <div class="modal-content p-4">
-            <h3 class="text-center mb-3">Book an Appointment</h3>
-            <form>
-                <input class="form-control mb-3" placeholder="First Name">
-                <input class="form-control mb-3" placeholder="Last Name">
-                <input type="date" class="form-control mb-3">
-                <input type="time" class="form-control mb-3">
-                <button class="btn btn-pink w-100">Submit</button>
-            </form>
+  <!-- Features -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card p-4 text-center">
+          <i class="bi bi-heart-fill fs-1 text-accent"></i>
+          <h3 class="h5 mt-3">Client-Centered</h3>
+          <p class="text-muted">We prioritize satisfaction with friendly, professional service.</p>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card p-4 text-center">
+          <i class="bi bi-palette-fill fs-1 text-accent"></i>
+          <h3 class="h5 mt-3">Creative Designs</h3>
+          <p class="text-muted">Trendy, elegant, and custom looks tailored to your style.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card p-4 text-center">
+          <i class="bi bi-cash-coin fs-1 text-accent"></i>
+          <h3 class="h5 mt-3">Affordable</h3>
+          <p class="text-muted">Transparent pricing for new and regular customers.</p>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-3 bg-dark text-white">
-    © 2025 Ria's Corner • All Rights Reserved
-</footer>
+  <!-- Footer -->
+  <footer class="footer mt-5 py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div>© 2025 Ria's Corner • All Rights Reserved</div>
+      <div class="socials">
+        #<i class="bi bi-instagram"></i></a>
+        #<i class="bi bi-facebook"></i></a>
+        https://wa.me/26760000000?text=Hi%20Ria%2C%20I%27d%20like%20to%20book%20an%20appointment.<i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
 
-https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+  <!-- Floating WhatsApp -->
+  https://wa.me/26760000000?text=Hi%20Ria%2C%20I%27d%20like%20to%20book%20an%20appointment.
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js</script>
+  scripts.js</script>
 </body>
 </html>
