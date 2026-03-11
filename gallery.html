@@ -5,28 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery – Ria's Nail Do</title>
 
-  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
-  https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css
-  https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap
-  styles.css
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
-      index.html
-        <span class="logo-dot me-2"></span> Ria's Corner
-      </a>
+      <a class="navbar-brand" href="index.html">Ria's Corner <span class="logo-dot ms-2"></span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">index.htmlHome</a></li>
-          <li class="nav-item">about.htmlAbout</a></li>
-          <li class="nav-item">services.htmlServices</a></li>
-          <li class="nav-item">gallery.htmlGallery</a></li>
-          <li class="nav-item">booking.htmlBook</a></li>
-          <li class="nav-item">contact.htmlContact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex ms-lg-3 align-items-center gap-2">
           <button id="themeToggle" class="btn btn-outline-light btn-sm"><i class="bi bi-moon-stars"></i></button>
@@ -45,22 +43,22 @@
     <!-- Masonry-like grid -->
     <div class="row g-3 gallery-grid">
       <div class="col-6 col-md-4">
-        Media (1).jpgMedia (1).jpg</a>
+        <a class="lightbox d-block" href="images/media1.jpg" data-caption="Set 1"><img src="images/media1-thumb.jpg" alt="Set 1" class="img-fluid rounded"></a>
       </div>
       <div class="col-6 col-md-4">
-        Media (2).jpgMedia (2).jpg</a>
+        <a class="lightbox d-block" href="images/media2.jpg" data-caption="Set 2"><img src="images/media2-thumb.jpg" alt="Set 2" class="img-fluid rounded"></a>
       </div>
       <div class="col-6 col-md-4">
-        Media (3).jpgMedia (3).jpg</a>
+        <a class="lightbox d-block" href="images/media3.jpg" data-caption="Set 3"><img src="images/media3-thumb.jpg" alt="Set 3" class="img-fluid rounded"></a>
       </div>
       <div class="col-6 col-md-4">
-        Media (4).jpgMedia (4).jpg</a>
+        <a class="lightbox d-block" href="images/media4.jpg" data-caption="Set 4"><img src="images/media4-thumb.jpg" alt="Set 4" class="img-fluid rounded"></a>
       </div>
       <div class="col-6 col-md-4">
-        Media (5).jpgMedia (5).jpg</a>
+        <a class="lightbox d-block" href="images/media5.jpg" data-caption="Set 5"><img src="images/media5-thumb.jpg" alt="Set 5" class="img-fluid rounded"></a>
       </div>
       <div class="col-6 col-md-4">
-        nails jpg.jpgnails jpg.jpg</a>
+        <a class="lightbox d-block" href="images/media6.jpg" data-caption="Set 6"><img src="images/media6-thumb.jpg" alt="Set 6" class="img-fluid rounded"></a>
       </div>
     </div>
   </main>
@@ -70,8 +68,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content bg-transparent border-0">
         <button type="button" class="btn-close btn-close-white ms-auto me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        #
-        <div class="text-center text-white mt-2"><span id="lightboxCaption"></span></div>
+        <div class="text-center text-white mt-2"><img id="lightboxImage" src="" alt="" class="img-fluid"><div id="lightboxCaption" class="mt-2"></div></div>
       </div>
     </div>
   </div>
@@ -80,16 +77,18 @@
     <div class="container d-flex justify-content-between align-items-center">
       <div>© 2025 Ria's Corner</div>
       <div class="socials">
-        #<i class="bi bi-instagram"></i></a>
-        #<i class="bi bi-facebook"></i></a>
-        https://wa.me/26760000000<i class="bi bi-whatsapp"></i></a>
+        <a class="text-white me-3" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a class="text-white me-3" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+        <a class="text-white" href="https://wa.me/26760000000" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </footer>
 
-  https://wa.me/26760000000?text=Hi%20Ria%2C%20I%27d%20like%20to%20book%20an%20appointment.<i class="bi bi-whatsapp"></i></a>
+  <a class="btn btn-success position-fixed bottom-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" href="https://wa.me/26760000000?text=Hi%20Ria%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp fs-4 text-white"></i>
+  </a>
 
-  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js</script>
-  scripts.js</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
