@@ -126,3 +126,46 @@ body{
   animation: fadeUp .6s ease .1s forwards;
 }
 @keyframes fadeUp{ to{ opacity: 1; transform: translateY(0); } }
+
+/* Dark Theme Fixes */
+[data-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --card-bg: rgba(30, 30, 30, 0.8);
+  --card-border-color: rgba(255, 255, 255, 0.05);
+  --text-color: #f8f9fa;
+  --heading-color: #ffd27f;
+}
+
+/* Cards */
+[data-theme="dark"] .card {
+  background: var(--card-bg);
+  border-color: var(--card-border-color);
+  color: var(--text-color);
+}
+
+/* Headings */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] .section-title {
+  color: var(--heading-color) !important;
+}
+
+/* Paragraphs + general text */
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] .text-muted {
+  color: var(--text-color) !important;
+}
+
+/* Price text */
+[data-theme="dark"] .price {
+  color: #ffcc66 !important;
+}
+
+/* Buttons (optional tweak) */
+[data-theme="dark"] .btn-primary {
+  background: #1e88e5;
+}
+
