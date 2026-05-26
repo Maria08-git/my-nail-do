@@ -121,7 +121,7 @@
       if (!form.reportValidity()) return;
       const msg = encodeURIComponent(buildMessage());
       // TODO: Replace the number with your real WhatsApp number
-      const number = '26760000000';
+      const number = '26775496530';
       window.open(`https://wa.me/${number}?text=${msg}`, '_blank');
     });
   }
